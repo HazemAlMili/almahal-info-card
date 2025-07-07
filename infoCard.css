@@ -1,0 +1,334 @@
+:root {
+    --main-color: rgb(22, 22, 22);
+    --secondry-color: rgb(51, 51, 51);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #753ce7, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.card {
+    background-color: rgb(0, 0, 0, 0.05);
+    backdrop-filter: blur(5px);
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: 70%;
+
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.card img {
+    margin: 60px auto;
+    border-radius: 50%;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+    .card img {
+        width: 450px;
+    }
+}
+
+.card h1 {
+    color: white;
+    font-size: 30px;
+    letter-spacing: 20px;
+    margin-bottom: -20px;
+    margin-top: -20px;
+    font-weight: 300;
+
+}
+
+@media (max-width: 992px) {
+    .card h1 {
+        font-size: 70px;
+        font-weight: 200;
+        width: 100%;
+    }
+}
+
+.card h3 {
+    color: white;
+    font-size: 13px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 992px) {
+    .card h3 {
+        font-size: 30px;
+        font-weight: 300;
+    }
+}
+
+.card q {
+    color: rgb(204, 200, 200);
+    font-size: 14px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 992px) {
+    .card q {
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+
+.card a {
+    text-decoration: none;
+    position: relative;
+    color: white;
+    background-color: #504e4e;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 5px;
+    transition: 0.3s;
+    margin-left: -10px;
+    font-size: 20px;
+}
+
+
+.card .links {
+    width: 100%;
+}
+
+
+@media (max-width: 992px) {
+    .card a {
+        width: 95%;
+        margin: 30px auto;
+        padding: 25px;
+        font-size: 30px;
+        transition: 0.3s;
+        margin-left: -5px;
+
+    }
+}
+
+.card a:hover {
+    transform: translate(0, -5px);
+    /* color: #23a6d5; */
+}
+
+.card .links a:hover:first-child {
+    transform: translate(0, -5px);
+    color: #323435;
+}
+
+.card .links a:hover:nth-child(2) {
+    transform: translate(0, -5px);
+    color: #1fb150;
+}
+
+.card .links a:hover:nth-child(3) {
+    transform: translate(0, -5px);
+    color: #db8420;
+}
+
+.card .links a:hover:nth-child(4) {
+    transform: translate(0, -5px);
+    color: #23a6d5;
+}
+
+.card .links a:hover:last-child {
+    transform: translate(0, -5px);
+    color: #8a40c2;
+}
+
+@media (max-width: 992px) {
+    .card a:hover {
+        transform: translate(0, -5px);
+    }
+
+}
+
+span:first-child {
+    width: 150px;
+    background: linear-gradient(-45deg,
+            #ee7752,
+            #753ce7,
+            #23a6d5,
+            #23d5ab);
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    left: 300px;
+    top: -10px;
+    animation: animate 3s infinite ease alternate;
+}
+
+
+@media (max-width:992px) {
+    span:first-child {
+        top: 300px;
+        left: 100px;
+    }
+}
+
+span:nth-child(2) {
+    width: 150px;
+    background: linear-gradient(-45deg,
+            #ee7752,
+            #753ce7,
+            #23a6d5,
+            #23d5ab);
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    left: 800px;
+    top: 160px;
+    animation: animate 4s infinite linear alternate;
+}
+
+@media (max-width:992px) {
+    span:nth-child(2) {
+        top: 100px;
+        left: 70%;
+    }
+}
+
+span:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(-45deg,
+            #ee7752,
+            #753ce7,
+            #23a6d5,
+            #23d5ab);
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    animation: animate 2.5s infinite linear alternate;
+}
+
+@media (max-width:992px) {
+    span:nth-child(3) {
+        top: 50%;
+        left: 70%;
+    }
+}
+
+span:nth-child(4) {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(-45deg,
+            #ee7752,
+            #753ce7,
+            #23a6d5,
+            #23d5ab);
+    border-radius: 50%;
+    position: absolute;
+    left: 5%;
+    top: 80%;
+    animation: animate 3s infinite linear alternate;
+}
+
+@media (max-width:992px) {
+    span:nth-child(4) {
+        top: 90%;
+    }
+}
+
+span:nth-child(5) {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(-45deg,
+            #ee7752,
+            #753ce7,
+            #23a6d5,
+            #23d5ab);
+    border-radius: 50%;
+    position: absolute;
+    left: 80%;
+    top: 80%;
+    animation: animate 3.5s infinite linear alternate;
+}
+
+@media (max-width:992px) {
+    span:nth-child(5) {
+        top: 100%;
+    }
+}
+
+
+@keyframes animate {
+    0% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
