@@ -23,18 +23,21 @@ body {
 .card {
     background-color: rgb(0, 0, 0, 0.05);
     backdrop-filter: blur(5px);
-    width: 400px;
+    width: 500px;
+    /* height: 100dvh; */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 1;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     text-align: center;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 @media (max-width: 1200px) {
     .card {
@@ -45,23 +48,12 @@ body {
 
 @media (max-width: 992px) {
     .card {
-        width: 80%;
+        width: 100%;
+        padding: 20px;
         margin: 20px auto;
     }
 }
 
-@media (max-width: 768px) {
-    .card {
-        width: 90%;
-    }
-}
-
-@media (max-width: 576px) {
-    .card {
-        width: 100%;
-        padding: 20px;
-    }
-}
 
 .card img {
     margin: 30px auto;
@@ -80,7 +72,7 @@ body {
     color: white;
     font-size: 30px;
     /* letter-spacing: 20px; */
-    margin-bottom: -20px;
+    margin-bottom: 10px;
     margin-top: -20px;
     font-weight: 300;
 
@@ -118,7 +110,7 @@ body {
 
 @media (max-width: 992px) {
     .card q {
-        font-size: 20px;
+        font-size: 40px;
         font-weight: 300;
     }
 }
@@ -320,10 +312,12 @@ span:nth-child(5) {
 }
 
 .coffee-bean {
-    position: absolute;
+    position: fixed;
+    /* changed from absolute */
     opacity: 0.8;
     pointer-events: none;
-    z-index: -1;
+    z-index: 0;
+    /* below .card */
     animation: float-up 10s infinite linear;
 }
 
